@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <!--  -->
+</head>
+<body>
+    <section class="blog">
+        <div class="blog-content">
+            
+        </div>
+    </section>
+</body>
+<script>
+    // function ambildata(data) {
+    //     //     console.log(data.feed.entry[0].media$thumbnail.url);
+    //     //     console.log(data.feed.entry[0].summary.$t);
+    //     //     console.log(data.feed.entry[0].title.$t);
+    //     // ('.blog').append('<a href="'+data.feed.entry[0].link[4].href+'"><h1>'+data.feed.entry[0].title.$t+'</h1></a><img src="'+pembesargambar(data.feed.entry[0].media$thumbnail.url)+'" alt="" width="300"><p>'+data.feed.entry[0].summary.$t+'</p');
+
+    // }
+
+    function pembesargambar(dataurl){
+                return dataurl.replace('s72-c','s400')
+            }
+
+  function ambildata(data){
+    $('.blog-content').append('<a href="'+data.feed.entry[0].link[4].href+'"><img src="'+pembesargambar(data.feed.entry[0].media$thumbnail.url)+'" alt="" ><h1>'+data.feed.entry[0].title.$t+'!</h1><p>Kain tenun merupakan salah satu warisan budaya Indonesia yang sangat unik. Seiring berjalannya waktu, kain tenun semakin dikenal oleh masyarakat Indonesia dan dunia. Berikut adalah keunikan kain tenun </p></a>');
+  }
+
+  
+</script>
+
+<script>
+  function ambildata(data){
+    $('.blog-content').append('<a href="'+data.feed.entry[0].link[4].href+'"><img src="'+pembesargambar(data.feed.entry[0].media$thumbnail.url)+'" alt="" ><h1>'+data.feed.entry[0].title.$t+'!</h1><p>Kain tenun merupakan salah satu warisan budaya Indonesia yang sangat unik. Seiring berjalannya waktu, kain tenun semakin dikenal oleh masyarakat Indonesia dan dunia. Berikut adalah keunikan kain tenun </p></a>');
+  }
+</script>
+
+</script>
+
+<script src="https://tenuntimor.blogspot.com/feeds/posts/default?alt=json-in-script&callback=ambildata"></script>
+
+
+</html>
